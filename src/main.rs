@@ -225,3 +225,28 @@ async fn save_comic_data_to_file(file_path: &str, comic_data: &[u8]) -> Result<(
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use tokio::fs;
+
+    #[tokio::test]
+    async fn test_save_comic_data_to_file() {
+        let test_path = "./test_comic.jpg";
+        let test_data = vec![1, 2, 3, 4, 5]; // Mock data
+
+        // Run the function
+        let result = save_comic_data_to_file(test_path, &test_data).await;
+
+        // Ensure no error is returned
+        assert!(result.is_ok());
+
+        // Check if file was written correctly
+        let saved_data = fs::read(test_path).await.unwrap();
+        assert_eq!(saved_data, test_data);
+
+        // Cleanup
+        let _ = fs::remove_file(test_path).await;
+    }
+}
