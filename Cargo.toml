@@ -1,0 +1,24 @@
+[package]
+name = "xkcd-rs" 
+version = "0.1.0" 
+edition = "2021"
+authors = [
+  "Davis Wainaina <davisjwn@gmail.com>"
+]
+description = "A Rust utility for downloading and saving XKCD comics."
+license = "MIT"
+repository = "https://github.com/ninenine/xkcd-rs"
+readme = "README.md"
+keywords = ["xkcd", "comics", "cli", "utility", "rust"]
+
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json", "blocking"] } # The reqwest crate for making HTTP requests.
+serde = { version = "1.0", features = ["derive"] } # The serde crate for serializing and deserializing data.
+tokio = { version = "1.0", features = ["full"] } # The tokio crate for asynchronous programming.
+
+[profile.release]
+opt-level = 3 # The optimization level for release builds.
+lto = true # Enable link-time optimization for release builds.
+panic = 'abort' # Abort on panic for release builds.
+codegen-units = 1 # The number of codegen units to use for release builds.
