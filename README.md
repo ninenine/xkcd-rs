@@ -43,6 +43,10 @@ This will start downloading all XKCD comics to the specified directory.
 
 You can modify certain parameters, such as the maximum number of concurrent downloads, by editing the source. Future versions may support a configuration file or command-line arguments.
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
 ## Acknowledgments
 
 - Inspired by the wonderful world of [XKCD](https://xkcd.com/).
