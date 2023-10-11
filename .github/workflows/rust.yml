@@ -19,3 +19,8 @@ jobs:
         run: cargo build --release --verbose
       - name: Run tests
         run: cargo test --verbose
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: xkcd-rs
+          path: target/release/xkcd-rs
