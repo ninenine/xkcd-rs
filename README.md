@@ -1,7 +1,8 @@
 # xkcd-rs 🚀
 
-A Rust utility for downloading and saving XKCD comics.
 [![xkcd-rs](https://github.com/ninenine/xkcd-rs/actions/workflows/rust.yml/badge.svg)](https://github.com/ninenine/xkcd-rs/actions/workflows/rust.yml)
+
+A Rust utility for downloading and saving XKCD comics.
 
 ![XKCD Logo](code_lifespan.png)
 
