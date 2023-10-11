@@ -12,7 +12,10 @@ A Rust utility for downloading and saving XKCD comics.
 
 ## Requirements
 
-- Rust 2018 Edition or later.
+- Rust 2018 Edition or later. You can download Rust from the official website or using Rustup:
+
+  - [Download Rust](https://www.rust-lang.org/tools/install)
+  - [Rustup](https://rustup.rs/)
 
 ## Installation
 
